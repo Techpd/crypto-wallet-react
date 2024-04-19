@@ -1,0 +1,86 @@
+// ==========================================================================
+//  Site Button Component
+//  ==========================================================================
+
+// Standard default button class
+.site-btn {
+  background-color: color(secondary, darker);
+  color: color(white);
+  min-height: 40px;
+  width: 100%;
+  @include font-rem(16px, 24px);
+  font-family: $baseFontFamily;
+  transition: ease-in-out 0.3s;
+  border-radius: 0;
+  border: 1px solid color(primary, base);
+
+  &:disabled{
+    background-color: color(secondary, darker);
+    color: color(white);
+  }
+  
+  @include bp(tablet-md) {
+    &:hover {
+      background-color: color(white);
+      color: color(secondary, darker);
+      border: 1px solid color(secondary, darker);
+    }
+
+    // &:hover,&:active{
+    //   background-color: color(secondary, darker);
+    //   color: color(white);
+    // }
+  }
+  // secondary default button class
+  &-2 {
+    background-color: color(white);
+    color: color(secondary, darker);
+    border: 1px solid color(secondary, darker);
+    min-height: 40px;
+    width: 100%;
+    @include font-rem(16px, 24px);
+    font-family: $baseFontFamily;
+    @extend .font-weight-regular;
+    transition: ease-in-out 0.3s;
+    @include bp(tablet-md) {
+      &:hover {
+        background-color: color(secondary, darker);
+        color: color(white);
+      }
+    }
+  }
+
+  &--with-border {
+    background-color: transparent;
+    color: color(secondary, darker);
+    border: 1px solid color(secondary, darker);
+    min-height: 40px;
+    width: 100%;
+    @include font-rem(16px, 22px);
+    font-family: $baseFontFamily;
+    @extend .font-weight-regular;
+    transition: ease-in-out 0.3s;
+    @include bp(tablet-md) {
+      &:hover {
+        background-color: color(secondary, darker);
+        color: color(white);
+      }
+    }
+  }
+
+  &--link.site-btn{
+		background: transparent;
+		color: color(text);		
+		text-decoration: none;//underline;
+		min-height: auto;		
+		min-width: auto;
+    border: none;
+		@include bp(tablet-md){
+			&:hover{
+				background: transparent;
+				color: color(text);
+				text-decoration: underline; //none;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+// Header Styles
+.header {
+    min-height: 80px;
+    background-color: white;
+    box-shadow: 1px 1px 15px rgba(128, 128, 128, 0.213);
+    padding: 10px;
+    @include bp(mobile) {
+        padding: 10px 0;
+    }
+
+    .row {
+        align-items: center;
+        // @include bp(tablet-md) {
+        //     [class^="col-"] {
+        //         // logo
+        //         &:first-child {
+        //             order: 2;
+        //             text-align: center !important;
+        //         }
+
+        //         // left arrow
+        //         &:nth-last-child(2) {
+        //             order: 1;
+        //             justify-content: flex-start !important;
+        //         }
+
+        //         // menu dots
+        //         &:last-child {
+        //             order: 3;
+        //         }
+        //     }
+        // }
+    }
+
+    &__logo {
+        color: color(text);
+        @include font-clamp(108.33px, 32px);
+        @extend .font-weight-semi-bold;
+        @include letter-spacing(-25);
+    }
+
+    &__menu_dots {
+        cursor: pointer;
+        width: 20px;
+    }
+} // header mobile devices end

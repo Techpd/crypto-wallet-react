@@ -1,0 +1,28 @@
+$font-path: "../scss/fonts/";
+$font-name: "SF-Pro-Display";
+$font-type: "otf";
+$font-format: "opentype";
+
+@font-face {
+    font-family: $font-name, sans-serif;
+    src: url("#{$font-path}#{$font-name}-Regular.#{$font-type}") format(#{$font-format});
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name, sans-serif;
+    src: url("#{$font-path}#{$font-name}-Medium.#{$font-type}") format(#{$font-format});
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name, sans-serif;
+    src: url("#{$font-path}#{$font-name}-Semibold.#{$font-type}") format(#{$font-format});
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

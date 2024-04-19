@@ -1,0 +1,106 @@
+.bitcoin {
+    border-radius: 50px;
+    background-color: color(white);
+    box-shadow: 0px 59px 111px 0px rgba(154, 155, 176, 0.17);
+    max-width: 1269px;
+    width: 100%;
+    min-height: 786px;
+    margin-top: 89px;
+    padding: 88px 89px 102px 91px;
+
+    &__icon_text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            color: color(text);
+            @include font-clamp(53.48px);
+            @extend .font-weight-semi-bold;
+            @include letter-spacing(-25);
+        }
+
+        .wrapper {
+            &-left {
+                display: flex;
+                align-items: center;
+                gap: 78px;
+            }
+
+            &-right {
+                p {
+                    color: color(heading);
+                }
+            }
+        }
+    }
+
+    .currancy {
+        margin-top: 85px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+        &__amount {
+            color: color(text);
+            @include font-clamp(125px);
+            @extend .font-weight-semi-bold;
+            @include letter-spacing(0);
+            @include bp(mobile) {
+                @include font-rem(25px, 28px);
+            }
+        }
+    }
+
+    .user_currancy {
+        margin-top: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: color(heading);
+            @include font-clamp(75px);
+            @extend .font-weight-semi-bold;
+            @include letter-spacing(0);
+            @include bp(mobile) {
+                @include font-rem(25px, 28px);
+            }
+        }
+
+        &__amount {
+            margin-right: 28px;
+        }
+
+        &__monitor-btn {
+            background-color: color(secondary, base);
+            width: 100%;
+            max-width: 282px;
+            min-height: 103px;
+            z-index: 63;
+            border: 1px solid color(secondary, base);
+            border-radius: 51.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: color(white);
+            @include font-clamp(53.5px);
+            @extend .font-weight-bold;
+            @include letter-spacing(0);
+            padding: 30px 51px 33px 40px;
+        }
+    }
+
+    &__toggle_arrow {
+        margin-top: 79px;
+        @extend .text-align-center;
+        img {
+            transform: rotateX(180deg);
+            transition: transform ease 0.4s;
+            @extend .cursor-pointer;
+
+            &.active {
+                transform: rotateX(0);
+            }
+        }
+    }
+}

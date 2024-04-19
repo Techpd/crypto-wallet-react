@@ -1,0 +1,52 @@
+// navbar
+.navbar {
+    position: relative;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition:
+        height,
+        opacity ease 0.3s;
+    &.active {
+        opacity: 1;
+        height: 100%;
+        overflow: visible;
+        max-width: 200px;
+        width: 100%;
+        text-align: end;
+    }
+    .menu {
+        border-radius: 8px;
+        background-color: color(white);
+        padding-block: 10px;
+        padding-left: 10px;
+        box-shadow: 2px 59px 100px 0px rgba(154, 155, 176, 0.17);
+        width: 100%;
+        top: 11px;
+        left: 0;
+        position: absolute;
+        z-index: 99;
+
+        &__items {
+            color: color(text);
+            @include font-clamp(18.33px);
+            @extend .font-weight-semi-bold;
+            @include letter-spacing(-25);
+            cursor: pointer;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            &:not(:last-child) {
+                border-bottom: 1px solid #8080804a;
+            }
+
+            @include bp(tablet-md) {
+                @include bp(hover) {
+                    background-color: #8080804a;
+                }
+            }
+        }
+    }
+}

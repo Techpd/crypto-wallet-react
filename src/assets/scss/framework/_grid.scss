@@ -1,0 +1,289 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    // min 576px
+    @include bp(xs) {
+        max-width: 540px;
+    }
+
+    // min 768px
+    @include bp(sm) {
+        max-width: 720px;
+    }
+
+    // min 992px
+    @include bp(md) {
+        max-width: 960px;
+        padding-right: calc($grid-gutter / 5);
+        padding-left: calc($grid-gutter / 5);
+    }
+
+    // min 1200px
+    @include bp(lg) {
+        max-width: 1140px;
+        padding-right: calc($grid-gutter / 4);
+        padding-left: calc($grid-gutter / 4);
+    }
+
+    // min 1440px
+    @include bp(xl) {
+        max-width: $grid-maxWidth;
+        padding-right: calc($grid-gutter / 2);
+        padding-left: calc($grid-gutter / 2);
+    }
+
+    // min 1920px
+    @include bp(xxl) {
+        max-width: $grid-maxWidth;
+        padding-right: calc($grid-gutter / 2);
+        padding-left: calc($grid-gutter / 2);
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include bp(xxl) {
+        margin-left: calc($grid-gutter / -2);
+        margin-right: calc($grid-gutter / -2);
+    }
+
+    @include bp(xl) {
+        margin-left: calc($grid-gutter / -2);
+        margin-right: calc($grid-gutter / -2);
+    }
+
+    @include bp(lg) {
+        margin-left: calc($grid-gutter / -4);
+        margin-right: calc($grid-gutter / -4);
+    }
+
+    @include bp(md) {
+        margin-left: calc($grid-gutter / -5);
+        margin-right: calc($grid-gutter / -5);
+    }
+
+    // > [class^="col-"] {
+    //     margin-top: $grid-gutter;
+    // }
+
+    > * {
+        @include bp(xxl) {
+            padding-left: calc(($grid-gutter / 2));
+            padding-right: calc(($grid-gutter / 2));
+        }
+
+        @include bp(xl) {
+            padding-left: calc(($grid-gutter / 2));
+            padding-right: calc(($grid-gutter / 2));
+        }
+
+        @include bp(lg) {
+            padding-left: calc(($grid-gutter / 4));
+            padding-right: calc(($grid-gutter / 4));
+        }
+
+        @include bp(md) {
+            padding-left: calc(($grid-gutter / 5));
+            padding-right: calc(($grid-gutter / 5));
+        }
+    }
+}
+
+.row.reverse {
+    flex-direction: row-reverse;
+}
+
+.col {
+    // only for .col class
+    flex: 1;
+
+    &-1 {
+        flex: 0 0 calc((100% / (12 / 1)));
+        max-width: calc((100% / (12 / 1)));
+    }
+
+    &-2 {
+        flex: 0 0 calc((100% / (12 / 2)));
+        max-width: calc((100% / (12 / 2)));
+    }
+
+    &-3 {
+        flex: 0 0 calc((100% / (12 / 3)));
+        max-width: calc((100% / (12 / 3)));
+    }
+
+    &-4 {
+        flex: 0 0 calc((100% / (12 / 4)));
+        max-width: calc((100% / (12 / 4)));
+    }
+
+    &-5 {
+        flex: 0 0 calc((100% / (12 / 5)));
+        max-width: calc((100% / (12 / 5)));
+    }
+
+    &-6 {
+        flex: 0 0 calc((100% / (12 / 6)));
+        max-width: calc((100% / (12 / 6)));
+    }
+
+    &-7 {
+        flex: 0 0 calc((100% / (12 / 7)));
+        max-width: calc((100% / (12 / 7)));
+    }
+
+    &-8 {
+        flex: 0 0 calc((100% / (12 / 8)));
+        max-width: calc((100% / (12 / 8)));
+    }
+
+    &-9 {
+        flex: 0 0 calc((100% / (12 / 9)));
+        max-width: calc((100% / (12 / 9)));
+    }
+
+    &-10 {
+        flex: 0 0 calc((100% / (12 / 10)));
+        max-width: calc((100% / (12 / 10)));
+    }
+
+    &-11 {
+        flex: 0 0 calc((100% / (12 / 11)));
+        max-width: calc((100% / (12 / 11)));
+    }
+
+    &-12 {
+        flex: 0 0 calc((100% / (12 / 12)));
+        max-width: calc((100% / (12 / 12)));
+    }
+
+    // md
+    @include bp(md) {
+        &-md-1 {
+            flex: 0 0 calc((100% / (12 / 1)));
+            max-width: calc((100% / (12 / 1)));
+        }
+
+        &-md-2 {
+            flex: 0 0 calc((100% / (12 / 2)));
+            max-width: calc((100% / (12 / 2)));
+        }
+
+        &-md-3 {
+            flex: 0 0 calc((100% / (12 / 3)));
+            max-width: calc((100% / (12 / 3)));
+        }
+
+        &-md-4 {
+            flex: 0 0 calc((100% / (12 / 4)));
+            max-width: calc((100% / (12 / 4)));
+        }
+
+        &-md-5 {
+            flex: 0 0 calc((100% / (12 / 5)));
+            max-width: calc((100% / (12 / 5)));
+        }
+
+        &-md-6 {
+            flex: 0 0 calc((100% / (12 / 6)));
+            max-width: calc((100% / (12 / 6)));
+        }
+
+        &-md-7 {
+            flex: 0 0 calc((100% / (12 / 7)));
+            max-width: calc((100% / (12 / 7)));
+        }
+
+        &-md-8 {
+            flex: 0 0 calc((100% / (12 / 8)));
+            max-width: calc((100% / (12 / 8)));
+        }
+
+        &-md-9 {
+            flex: 0 0 calc((100% / (12 / 9)));
+            max-width: calc((100% / (12 / 9)));
+        }
+
+        &-md-10 {
+            flex: 0 0 calc((100% / (12 / 10)));
+            max-width: calc((100% / (12 / 10)));
+        }
+
+        &-md-11 {
+            flex: 0 0 calc((100% / (12 / 11)));
+            max-width: calc((100% / (12 / 11)));
+        }
+
+        &-md-12 {
+            flex: 0 0 calc((100% / (12 / 12)));
+            max-width: calc((100% / (12 / 12)));
+        }
+    }
+
+    // lg
+    @include bp(lg) {
+        &-lg-1 {
+            flex: 0 0 calc((100% / (12 / 1)));
+            max-width: calc((100% / (12 / 1)));
+        }
+
+        &-lg-2 {
+            flex: 0 0 calc((100% / (12 / 2)));
+            max-width: calc((100% / (12 / 2)));
+        }
+
+        &-lg-3 {
+            flex: 0 0 calc((100% / (12 / 3)));
+            max-width: calc((100% / (12 / 3)));
+        }
+
+        &-lg-4 {
+            flex: 0 0 calc((100% / (12 / 4)));
+            max-width: calc((100% / (12 / 4)));
+        }
+
+        &-lg-5 {
+            flex: 0 0 calc((100% / (12 / 5)));
+            max-width: calc((100% / (12 / 5)));
+        }
+
+        &-lg-6 {
+            flex: 0 0 calc((100% / (12 / 6)));
+            max-width: calc((100% / (12 / 6)));
+        }
+
+        &-lg-7 {
+            flex: 0 0 calc((100% / (12 / 7)));
+            max-width: calc((100% / (12 / 7)));
+        }
+
+        &-lg-8 {
+            flex: 0 0 calc((100% / (12 / 8)));
+            max-width: calc((100% / (12 / 8)));
+        }
+
+        &-lg-9 {
+            flex: 0 0 calc((100% / (12 / 9)));
+            max-width: calc((100% / (12 / 9)));
+        }
+
+        &-lg-10 {
+            flex: 0 0 calc((100% / (12 / 10)));
+            max-width: calc((100% / (12 / 10)));
+        }
+
+        &-lg-11 {
+            flex: 0 0 calc((100% / (12 / 11)));
+            max-width: calc((100% / (12 / 11)));
+        }
+
+        &-lg-12 {
+            flex: 0 0 calc((100% / (12 / 12)));
+            max-width: calc((100% / (12 / 12)));
+        }
+    }
+}
