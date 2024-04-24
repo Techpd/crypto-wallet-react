@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Overlay from './components/Overlay';
 import Header from './components/Header';
 import Bitcoin from './components/Bitcoin';
-// import Footer from './components/Footer';
+import Graph from './components/Graph';
+import { Buysell } from './components/Buysell';
+// footer icons
+import Footer from './components/Footer';
 
 function App() {
   const [isActive, settoggleClass] = useState(false);
@@ -40,9 +43,15 @@ function App() {
         <div className="row">
           <div className="col-12">
             <Bitcoin />
+            <Graph />
+            <div className="buysell-wrapper">
+              <Buysell BuysellText="Buy BTC" className="buybtc" />
+              <Buysell BuysellText="Sell BTC" className="sellbtc" />
+            </div>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

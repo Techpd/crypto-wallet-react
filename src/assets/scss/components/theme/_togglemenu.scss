@@ -5,7 +5,42 @@
     transition: all ease-in-out 0.5s;
     &.active {
         opacity: 1;
-        height: 100%;
+        height: auto;
         overflow: visible;
+    }
+
+    &__items {
+        color: color(heading);
+        @include font-clamp(50px);
+        @extend .font-weight-semi-bold;
+        @include letter-spacing(-25);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 45px;
+        gap: 10px;
+        @include bp(tablet-sm) {
+            margin-top: 22px;
+        }
+
+        span {
+            cursor: pointer;
+            &.active {
+                background-color: color(heading);
+                color: color(white);
+                max-width: 209px;
+                min-height: 102px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 51px;
+
+                @include bp(tablet-sm) {
+                    max-width: 110px;
+                    min-height: 51px;
+                }
+            }
+        }
     }
 }

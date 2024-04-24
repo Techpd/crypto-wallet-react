@@ -27,6 +27,10 @@
         position: absolute;
         z-index: 99;
 
+        @include bp(xs) {
+            top: 25px;
+        }
+
         &__items {
             color: color(text);
             @include font-clamp(18.33px);
@@ -38,6 +42,16 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px;
+
+            &.active {
+                span {
+                    color: red;
+                }
+                svg path {
+                    fill: red;
+                }
+            }
+
             &:not(:last-child) {
                 border-bottom: 1px solid #8080804a;
             }

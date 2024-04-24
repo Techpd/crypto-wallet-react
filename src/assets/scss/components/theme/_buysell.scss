@@ -1,0 +1,87 @@
+.buysell-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 91px;
+    justify-content: space-between;
+    gap: 89px;
+    flex-wrap: wrap;
+    @include bp(tablet-sm) {
+        gap: 44px;
+        margin-top: 45px;
+    }
+    @include bp(mobile) {
+        margin-top: 45px;
+        gap: 22px;
+        flex-direction: column;
+    }
+}
+
+.buysell {
+    cursor: pointer;
+    color: color(text);
+    @include font-clamp(53.48px);
+    @extend .font-weight-bold;
+    @include letter-spacing(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 59px 111px 0px rgba(154, 155, 176, 0.17);
+    width: 100%;
+    height: 421px;
+    gap: 56px;
+    flex: 0 0 calc(50% - 89px);
+    @include bp(tablet-sm) {
+        flex-basis: calc(50% - 22px);
+        height: 321px;
+    }
+    @include bp(mobile) {
+        max-width: unset;
+        gap: 38px;
+        height: 321px;
+        padding-block: 40px;
+    }
+
+    &__icon {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 160px;
+        background: center/contain no-repeat;
+        @include bp(tablet-sm) {
+            width: 81px;
+            height: 81px;
+        }
+
+        &::before {
+            content: "";
+            background: $dollar center/contain no-repeat;
+            display: inline-flex;
+            width: 40px;
+            height: 100%;
+            @include bp(tablet-sm) {
+                width: 20px;
+            }
+        }
+
+        &.buybtc {
+            background-image: linear-gradient(90deg, rgb(29, 114, 241) 0%, rgb(23, 200, 252) 100%);
+        }
+
+        &.sellbtc {
+            background-image: linear-gradient(90deg, rgb(251, 35, 162) 0%, rgb(255, 103, 124) 100%);
+        }
+    }
+}
+
+.CIRCLE {
+    border-radius: 50%;
+
+    width: 160px;
+    height: 160px;
+    z-index: 99;
+}

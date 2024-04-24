@@ -7,7 +7,7 @@ const Bitcoin = () => {
     const [isActive, settoggleClass] = useState(false);
 
     const toggleClass = () => {
-      settoggleClass(!isActive);
+        settoggleClass(!isActive);
     };
 
     return (
@@ -15,7 +15,7 @@ const Bitcoin = () => {
             <div className="bitcoin">
                 <div className="bitcoin__icon_text">
                     <div className="wrapper-left">
-                        <img src={iconBitcoin} loading='lazy' alt="bit coin" />
+                        <img className="bit_icon" src={iconBitcoin} loading='lazy' alt="bit coin" />
                         <p>Bitcoin</p>
                     </div>
                     <div className="wrapper-right">
@@ -37,7 +37,7 @@ const Bitcoin = () => {
                     <span className="user_currancy__monitor-btn">-2.32%</span>
                 </div>
                 <div className="bitcoin__toggle_arrow">
-                    <img className={isActive ? 'active' : ''} src={iconArrow} alt="down_arrow" onClick={toggleClass} />
+                    <img className={`bit_icon ${isActive ? 'active' : ''}`} src={iconArrow} alt="down_arrow" onClick={toggleClass} />
                 </div>
             </div>
             <ExtraMenu className={isActive ? ' active' : ''} />

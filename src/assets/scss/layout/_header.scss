@@ -34,13 +34,27 @@
 
     &__logo {
         color: color(text);
-        @include font-clamp(108.33px, 32px);
+        @include font-clamp(108.33px, 18px);
         @extend .font-weight-semi-bold;
         @include letter-spacing(-25);
+    }
+
+    &__icon {
+        @include bp(tablet-sm) {
+            width: 20px;
+            height: 34px;
+            object-fit: contain;
+        }
     }
 
     &__menu_dots {
         cursor: pointer;
         width: 20px;
+        .header__icon {
+            @include bp(mobile) {
+                height: 34px;
+                object-fit: contain;
+            }
+        }
     }
 } // header mobile devices end

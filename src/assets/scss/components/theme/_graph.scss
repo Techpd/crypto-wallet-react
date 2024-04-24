@@ -1,0 +1,183 @@
+.graph {
+    border-radius: 50px;
+    background-color: color(white);
+    box-shadow: 0px 59px 111px 0px rgba(154, 155, 176, 0.17);
+    max-width: 1269px;
+    width: 100%;
+    min-height: 704px;
+    margin-top: 89px;
+    overflow: hidden;
+    @include bp(tablet-sm) {
+        margin-top: 44px;
+        min-height: unset;
+    }
+
+    // box-sizing: content-box;
+    // border-width: 13px;
+    // border-style: solid;
+    // border-image: linear-gradient(to 130%, #ffc843 0%, #ff8f17 100%);
+    // border-image-slice: 1;
+
+    &__values {
+        padding: 88px 89px 0 91px;
+        height: 339px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include bp(tablet-sm) {
+            height: 150px;
+            padding: 44px 45px 0 46px;
+        }
+        @include bp(mobile) {
+            padding: 22px 22px 0 23px;
+        }
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        color: color(primary, light);
+        @include font-clamp(50px);
+        @extend .font-weight-bold;
+        @include letter-spacing(-25);
+        @include bp(mobile) {
+            gap: 20px;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: color(lower);
+            background-size: contain;
+            // position: absolute;
+            z-index: 5;
+        }
+
+        &.higher {
+            color: color(heading);
+            &::before {
+                background-color: color(higher);
+            }
+        }
+    }
+
+    .graph-wrapper {
+        width: 100%;
+        height: 365px;
+        position: relative;
+        @include bp(mobile) {
+            height: 200px;
+        }
+
+        .current_btc {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            gap: 43px;
+            z-index: 5;
+            bottom: 83px;
+            left: 91px;
+            color: color(text);
+            @include font-clamp(53.5px);
+            @extend .font-weight-semi-bold;
+            @include letter-spacing(-25);
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                background-image: $blinkcircle;
+                background-size: contain;
+                // position: absolute;
+                z-index: 5;
+            }
+            @include bp(tablet-sm) {
+                left: 46px;
+                bottom: 46px;
+            }
+            @include bp(mobile) {
+                left: 23px;
+                bottom: 46px;
+                gap: 20px;
+            }
+        }
+        #linear-gradient-stroke {
+            transform: rotate(130deg);
+        }
+
+        #circleGradient {
+            transform: rotate(160deg);
+        }
+
+        .recharts-curve.recharts-tooltip-cursor {
+            display: none;
+        }
+
+        .recharts {
+            &-wrapper {
+                svg {
+                    overflow: visible;
+                }
+            }
+
+            &-curve.recharts-area-curve {
+                stroke-width: 13px;
+                @include bp(mobile) {
+                    stroke-width: 5px;
+                }
+            }
+
+            &-area-dots {
+                circle {
+                    r: 27px;
+                    stroke-width: 15px;
+                    fill: url(#circleGradient);
+                    stroke: hsla(35, 100%, 58%, 0.26);
+
+                    @include bp(standard-desktop) {
+                        r: 18px;
+                        stroke-width: 13px;
+                    }
+
+                    @include bp(tablet-sm) {
+                        r: 16px;
+                        stroke-width: 13px;
+                    }
+
+                    @include bp(mobile) {
+                        r: 8px;
+                        stroke-width: 10px;
+                    }
+
+                    &:not(:last-child) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .recharts-curve.recharts-tooltip-cursor {
+//     width: 58px;
+//     height: 58px;
+//     position: relative;
+//     &::before {
+//         content: "";
+//         display: inline-block;
+//         position: absolute;
+//         border-style: solid;
+//         border-width: 15px;
+//         border-color: rgb(255, 164, 39);
+//         border-radius: 50%;
+//         background-image: -moz-linear-gradient(90deg, rgb(255, 200, 67) 0%, rgb(255, 143, 23) 100%);
+//         background-image: -webkit-linear-gradient(90deg, rgb(255, 200, 67) 0%, rgb(255, 143, 23) 100%);
+//         background-image: -ms-linear-gradient(90deg, rgb(255, 200, 67) 0%, rgb(255, 143, 23) 100%);
+//         opacity: 0.26;
+//         z-index: 79;
+//     }
+// }

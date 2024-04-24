@@ -7,6 +7,15 @@
     min-height: 786px;
     margin-top: 89px;
     padding: 88px 89px 102px 91px;
+    @include bp(tablet-sm) {
+        min-height: unset;
+        padding: 44px 45px 56px 46px;
+        margin-top: 44px;
+    }
+    @include bp(mobile) {
+        margin-top: 22px;
+        padding: 22px 23px 38px 23px;
+    }
 
     &__icon_text {
         display: flex;
@@ -25,6 +34,10 @@
                 display: flex;
                 align-items: center;
                 gap: 78px;
+                flex-wrap: wrap;
+                @include bp(tablet-sm) {
+                    gap: 39px;
+                }
             }
 
             &-right {
@@ -40,14 +53,15 @@
         display: flex;
         align-items: center;
         gap: 38px;
+        @include bp(tablet-sm) {
+            margin-top: 47px;
+            gap: 19px;
+        }
         &__amount {
             color: color(text);
             @include font-clamp(125px);
             @extend .font-weight-semi-bold;
             @include letter-spacing(0);
-            @include bp(mobile) {
-                @include font-rem(25px, 28px);
-            }
         }
     }
 
@@ -56,19 +70,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include bp(mobile) {
+            gap: 10px;
+        }
 
         p {
             color: color(heading);
             @include font-clamp(75px);
             @extend .font-weight-semi-bold;
             @include letter-spacing(0);
-            @include bp(mobile) {
-                @include font-rem(25px, 28px);
-            }
         }
 
         &__amount {
             margin-right: 28px;
+            @include bp(mobile) {
+                margin-right: 10px;
+            }
         }
 
         &__monitor-btn {
@@ -87,16 +104,31 @@
             @extend .font-weight-bold;
             @include letter-spacing(0);
             padding: 30px 51px 33px 40px;
+            @include bp(tablet-sm) {
+                min-height: unset;
+                max-width: 165px;
+                padding: 20px;
+            }
+            @include bp(mobile) {
+                max-width: 130px;
+                padding: 15px;
+            }
         }
     }
 
     &__toggle_arrow {
         margin-top: 79px;
         @extend .text-align-center;
+        @include bp(mobile) {
+            margin-top: 34px;
+        }
         img {
             transform: rotateX(180deg);
             transition: transform ease 0.4s;
             @extend .cursor-pointer;
+            @include bp(mobile) {
+                width: 45px
+            }
 
             &.active {
                 transform: rotateX(0);

@@ -10,6 +10,8 @@ $colors: (
     border: #cdd5df,
     failure: #eb7267,
     error: #e3000b,
+    lower: #ef2755,
+    higher: #1ec070,
     success: #9cee00,
     white: #fff,
     black: #000,
@@ -24,8 +26,8 @@ $colors: (
     // nested map inception
     primary:
         (
-            base: #010f25,
-            light: #010000,
+            base: #fff7ee,
+            light: #9a9bb0,
             lighter: #e8cd76,
             extralight: #f7d976,
             dark: #333333,

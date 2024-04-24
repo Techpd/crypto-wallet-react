@@ -179,6 +179,10 @@
 	// padding-right: 15px;
 }
 
+.overflow-visible {
+	overflow: visible;
+}
+
 .disabled {
 	pointer-events: none;
 }
@@ -378,5 +382,11 @@
 			height: 100vh;
 			z-index: 98;
 		}
+	}
+}
+
+.bit_icon {
+	@include bp(tablet-sm) {
+		width: 81px;
 	}
 }

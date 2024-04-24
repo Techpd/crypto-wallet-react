@@ -26,3 +26,11 @@ $font-format: "opentype";
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: $font-name, sans-serif;
+    src: url("#{$font-path}#{$font-name}-Bold.#{$font-type}") format(#{$font-format});
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

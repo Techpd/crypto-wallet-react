@@ -9,7 +9,7 @@ const Navbar = () => {
                 <li className="menu__items"><span>Edit</span><FontAwesomeIcon icon={faPenToSquare} /></li>
                 <li className="menu__items"><span>Courier info</span><FontAwesomeIcon icon={faCircleInfo} /></li>
                 <li className="menu__items"><span>Share</span><FontAwesomeIcon icon={faArrowUpFromBracket} /></li>
-                <li className="menu__items"><span>Remove</span><FontAwesomeIcon icon={faCircleMinus} /></li>
+                <li className="menu__items active"><span>Remove</span><FontAwesomeIcon icon={faCircleMinus} /></li>
             </ul>
         </nav>
     );
