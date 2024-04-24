@@ -25,6 +25,8 @@
 
         span {
             cursor: pointer;
+            text-align: center;
+            min-width: 80px;
             &.active {
                 background-color: color(heading);
                 color: color(white);
